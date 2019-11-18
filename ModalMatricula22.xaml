@@ -1,0 +1,53 @@
+﻿<Window x:Class="Sistema_Academico.UI.WPF.ModalMatricula22"
+          TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="White"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+       
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sistema_Academico.UI.WPF"
+        mc:Ignorable="d"
+        Title="ModalMatricula22" Height="601.991" Width="888.654"   Loaded="Window_Loaded" WindowStyle="None">
+    <Grid Background="#FF102042" Margin="0,0,-8,0">
+        <DataGrid x:Name="dgmatricula" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Left" Margin="92,183,0,0" VerticalAlignment="Top" Height="297" Width="740" SelectionChanged="dgmatricula_SelectionChanged">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Binding="{Binding Path=Id}" Header="Id" Width="0" />
+                <DataGridTextColumn Binding="{Binding Path=Nie}" Header="Nie" Width="120" />
+                <DataGridTextColumn  Header="Nombre Completo" Width="300" >
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat="{} {0} {1} ,  {2} {3} {4}">
+                            <Binding Path="Primer_Apellido"/>
+                            <Binding Path="Segundo_Apellido"/>
+                            <Binding Path="Primer_Nombre"/>
+                            <Binding Path="Segundo_Nombre"/>
+                            <Binding Path="Tercer_Nombre"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Path=Fecha_Nacimiento}" Header="Fecha de Nacimiento" Width="150" />
+                <DataGridTextColumn Binding="{Binding Path=Direccion}" Header="Direccion" Width="150" />
+                <DataGridTextColumn Binding="{Binding Path=Nombre_Responsable}" Header="Nombre_Responsable" Width="150" />
+                <DataGridTextColumn Binding="{Binding Path=DUI}" Header="DUI" Width="150" />
+                <DataGridTextColumn Binding="{Binding Path=grado.Nombre_Grado}" Header="Grado" Width="150" />
+                <DataGridTextColumn Binding="{Binding Path=Seccion}" Header="Sección" Width="150"/>
+                <DataGridTextColumn Binding="{Binding Path=Sexo}" Header="Sexo" Width="150" />
+                <DataGridTextColumn Binding="{Binding Path=Turno}" Header="Turno" Width="150" />
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <TextBox x:Name="txtBuscar" materialDesign:HintAssist.Hint="Buscar alumno" materialDesign:HintAssist.IsFloating="True" HorizontalAlignment="Left" Height="49" Margin="271,42,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="477" TextChanged="txtBuscar_TextChanged" Background="{x:Null}" Foreground="#DDFFFFFF"/>
+        <RadioButton x:Name="rbNIe" Content="Nie" HorizontalAlignment="Left" Margin="204,125,0,0" VerticalAlignment="Top" Width="56" Foreground="#DDFDFDFD"/>
+        <RadioButton x:Name="rbNombre" Content="Nombre" HorizontalAlignment="Left" Margin="410,125,0,0" VerticalAlignment="Top" Width="100" Foreground="#DDF9F5F5"/>
+        <RadioButton x:Name="rbApellido" Content="Apellido" HorizontalAlignment="Left" Margin="727,125,0,0" VerticalAlignment="Top" Foreground="#DDFFFFFF"/>
+
+    </Grid>
+</Window>

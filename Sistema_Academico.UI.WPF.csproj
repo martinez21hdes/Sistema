@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8F2497C-E0FE-4048-B63A-BE40E364F622}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema_Academico.UI.WPF</RootNamespace>
+    <AssemblyName>Sistema_Academico.UI.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.0.325, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.0\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.6.0.325, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.6.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ModalMatricula.xaml.cs">
+      <DependentUpon>ModalMatricula.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModalMatricula22.xaml.cs">
+      <DependentUpon>ModalMatricula22.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteNotas.xaml.cs">
+      <DependentUpon>ReporteNotas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sCiclo.xaml.cs">
+      <DependentUpon>sCiclo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sGrados.xaml.cs">
+      <DependentUpon>sGrados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sMateria.xaml.cs">
+      <DependentUpon>sMateria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sMatricula.xaml.cs">
+      <DependentUpon>sMatricula.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sNotas.xaml.cs">
+      <DependentUpon>sNotas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sNotasValores.xaml.cs">
+      <DependentUpon>sNotasValores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sValores.xaml.cs">
+      <DependentUpon>sValores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sYears.xaml.cs">
+      <DependentUpon>sYears.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="valoresDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>valoresDataSet.xsd</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ModalMatricula.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModalMatricula22.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReporteNotas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="sCiclo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sGrados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sMateria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sMatricula.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sNotas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sNotasValores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sValores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sYears.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportNotas.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.Ciclo.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.Data.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.Grado.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.Materia.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.Matricula.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.Notas.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.NotasValores.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.Valores.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DataModels.Years.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DSNotas+NotasDataTable.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DSNotas+NotasRow.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DSNotas+NotasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DSNotas+NotasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DSNotas.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DSNotasTableAdapters.NotasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DSNotasTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.DSNotasTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Sistema_Academico.DAL.UnitOfWork.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\Entypo.ttf" />
+    <None Include="valoresDataSet.xsc">
+      <DependentUpon>valoresDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="valoresDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>valoresDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="valoresDataSet.xss">
+      <DependentUpon>valoresDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sistema_Academico.BL\Sistema_Academico.BL.csproj">
+      <Project>{dcb12942-440b-496a-aa3f-083e3931709b}</Project>
+      <Name>Sistema_Academico.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sistema_Academico.DAL\Sistema_Academico.DAL.csproj">
+      <Project>{212eacf5-1e12-49a3-8199-32e9b62bfb65}</Project>
+      <Name>Sistema_Academico.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\agregar-usuario.png" />
+    <Resource Include="Imagenes\calendario.png" />
+    <Resource Include="Imagenes\ciclo-par-de-flechas-lineas-dibujadas-a-mano.png" />
+    <Resource Include="Imagenes\disquete.png" />
+    <Resource Include="Imagenes\empleado.png" />
+    <Resource Include="Imagenes\envio.png" />
+    <Resource Include="Imagenes\graduation-certificate.png" />
+    <Resource Include="Imagenes\images %281%29.png" />
+    <Resource Include="Imagenes\images.png" />
+    <Resource Include="Imagenes\iniciar-la-sesion.png" />
+    <Resource Include="Imagenes\libreta-de-direcciones.png" />
+    <Resource Include="Imagenes\menu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
